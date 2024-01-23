@@ -5,7 +5,8 @@ let numberOfClickedBalls = 0;
 let randomNumbersArray = [];
 let gameOver = false;
 let startTime;
-
+const ballPositionRangeLeft = 700;
+const ballPositionRangeTop = 400;
 
 function randomRange(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -14,8 +15,8 @@ function randomRange(min, max) {
 function createBall() {
     const ball = document.createElement("div");
     ball.className = "ball";
-    ball.style.left = randomRange(0, 700) + "px";
-    ball.style.top = randomRange(0, 400) + "px";
+    ball.style.left = randomRange(0, ballPositionRangeLeft) + "px";
+    ball.style.top = randomRange(0, ballPositionRangeTop) + "px";
     
     const randomNumber = randomRange(1, 100);
     ball.innerText = randomNumber;
