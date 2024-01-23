@@ -1,6 +1,6 @@
 "use strict";
 
-const numberOfBalls = 10;
+const numberOfBalls = 20;
 let numberOfClickedBalls = 0;
 let randomNumbersArray = [];
 let gameOver = false;
@@ -75,7 +75,7 @@ function clickBall(e) {
 
 function displayGameOverMessage() {
     const gameDuration = (new Date() - startTime) / 1000;
-    const finalMessage = `GAME OVER. No more odd numbers left to click! You took ${gameDuration} seconds to click all the balls.`;
+    const finalMessage = `GAME OVER. No more odd numbers left! You took ${gameDuration} seconds to click all the balls.`;
     document.querySelector(".message").textContent = finalMessage;
     clearInterval(intervalId);
     console.log(randomNumbersArray);
